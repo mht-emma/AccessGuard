@@ -1,0 +1,147 @@
+/* ============================================
+   FORBIDDEN PAGE - CYBERSECURITY DASHBOARD
+   ============================================ */
+
+.forbidden-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  animation: fadeIn var(--transition-base) forwards;
+}
+
+.forbidden-content {
+  text-align: center;
+  max-width: 500px;
+  padding: var(--space-8);
+}
+
+/* Icon */
+.forbidden-icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto var(--space-6);
+  background: var(--color-danger-bg);
+  border: 2px solid rgba(255, 71, 87, 0.3);
+  border-radius: var(--radius-2xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 2s infinite;
+}
+
+.forbidden-icon svg {
+  width: 60px;
+  height: 60px;
+  color: var(--color-danger);
+}
+
+/* Title */
+.forbidden-content h1 {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+/* Status Badge */
+.forbidden-content .status-badge {
+  margin-bottom: var(--space-4);
+}
+
+/* Reason */
+.forbidden-reason {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  background: var(--color-danger-bg);
+  border: 1px solid rgba(255, 71, 87, 0.3);
+  border-radius: var(--radius-md);
+  color: var(--color-danger);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-4);
+}
+
+.forbidden-reason::before {
+  content: '⚠';
+}
+
+/* Message */
+.forbidden-message {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-8);
+}
+
+/* Back Button */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  border-radius: var(--radius-md);
+  color: white;
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-glow);
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow-strong);
+  color: white;
+}
+
+.back-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Additional Info */
+.forbidden-info {
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-primary);
+}
+
+.forbidden-info p {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+}
+
+.forbidden-info a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.forbidden-info a:hover {
+  color: var(--accent-secondary);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 480px) {
+  .forbidden-content {
+    padding: var(--space-4);
+  }
+  
+  .forbidden-icon {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .forbidden-icon svg {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .forbidden-content h1 {
+    font-size: var(--text-2xl);
+  }
+}
